@@ -1,0 +1,21 @@
+{% extends 'taskEasyApp/base.html' %}
+{% block content %}
+
+<div class="page-header">
+  <table style="width:100%">
+  <tr>
+    <th>Priority</th><th>Task Name</th><th>Task Description</ht><th>Completion Date</th>
+</tr>
+
+  {% for tasks in taskTables %}
+  <tr>
+    <td> {{tasks.priority}}</td>
+    <td> {{ tasks.taskName }} </td>
+    <td> {{ tasks.description}} </td>
+    <td> {{ tasks.completition}} </td>
+  </tr>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}
